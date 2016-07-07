@@ -29,3 +29,25 @@ def quicksort(arr):
 g = Greeter('Fred')  # Construct an instance of the Greeter class
 g.greet()            # Call an instance method; prints "Hello, Fred"
 g.greet(loud=True)   # Call an instance method; prints "HELLO, FRED!"
+
+
+3. "seed" method use to generate same random numbers at different experiment
+
+# Without seed 
+import random as rand
+n_ws= [rand.randint(1,100) for i in range(5) ]
+print n_ws
+
+n1_ws= [rand.randint(1,100) for i in range(5) ]
+print n1_ws
+
+# With seed
+rand.seed(1)
+n2_ws= [rand.randint(1,100) for i in range(5) ]
+print n2_ws
+rand.seed(1)
+n3_ws= [rand.randint(1,100) for i in range(5) ]
+print n3_ws
+
+
+
